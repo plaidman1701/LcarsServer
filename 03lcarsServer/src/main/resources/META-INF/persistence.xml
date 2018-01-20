@@ -1,0 +1,20 @@
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence
+    http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+	version="2.0">
+
+	<persistence-unit name="StarshipPU" transaction-type="JTA">
+		<jta-data-source>java:/MySqlLocal</jta-data-source>
+
+		<mapping-file>META-INF/orm.xml</mapping-file>
+		<class>com.plaidman1701.lcarsserver03.entity.Starship</class>
+		<properties>
+			<!-- <property name="hibernate.show_sql" value="true" /> -->
+			<!-- <property name="hibernate.globally_quoted_identifiers" value="true" /> -->
+		</properties>
+
+
+	</persistence-unit>
+
+</persistence>
